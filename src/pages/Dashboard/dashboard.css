@@ -1,0 +1,13 @@
+.box {
+    margin-left: 20px;
+}
+.pagination {
+    position: sticky;
+    bottom: 0;
+}
+
+.destinations-wrapper {
+    flex-wrap: wrap;
+    margin: 0;
+}
+

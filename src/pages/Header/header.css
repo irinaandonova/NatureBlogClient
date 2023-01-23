@@ -1,0 +1,18 @@
+header {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: rgb(207 220 208);
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+    padding: 10px 30px;
+    background-color: rgb(127 204 147);
+    border-radius: 20px;
+    margin: 10px;
+}

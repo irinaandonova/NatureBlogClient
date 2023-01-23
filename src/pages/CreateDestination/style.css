@@ -1,0 +1,13 @@
+.region-select,
+.destination-type {
+    width: 14rem;
+}
+
+.container {
+    margin: 50px;
+    justify-content: space-evenly;
+}
+
+.submit-btn {
+    width: 12rem;
+}

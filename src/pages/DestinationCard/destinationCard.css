@@ -1,0 +1,22 @@
+.destination-image {
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid;
+    height: 190px;
+    width: 300px;
+}
+
+.destination-wrapper {
+    margin: 70px;
+    width: 20%;
+    border: 1px solid;
+    padding: 20px;
+    background-color: rgb(213 237 220);
+    border-radius: 20px;
+}
+
+.conatiner {
+    margin-bottom: 0;
+}
+
+
