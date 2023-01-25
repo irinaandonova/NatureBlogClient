@@ -13,13 +13,14 @@ const Sorting =({ manageSorting }) => {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 120, marginLeft: '10px' }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Sort By</InputLabel>
         <Select
           value={selectValue}
           label="Sort By"
           onChange={handleChange}
+          sx={{width: '385px'}}
         >
           <MenuItem value='visitors'>Visitors</MenuItem>
           <MenuItem value='alphabetical'>Alphabetical(A-Z)</MenuItem>

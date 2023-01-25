@@ -15,12 +15,11 @@ const EditHikingTrail = ({ addInfo, destinationData }) => {
             <RadioGroup aria-labelledby="Hiking difficulty" value={difficulty} onChange={(e) => {
                 addInfo({ duration, difficulty: Number(e.currentTarget.value) })
                 setDifficulty(Number(e.currentTarget.value))
-                 
+
             }}>
-                
-                                <FormControlLabel value="1" control={<Radio />} label="1"  />
-                                <FormControlLabel value="2" control={<Radio />} label="2" />
-                                <FormControlLabel value="3" control={<Radio />} label="3" />
+                <FormControlLabel value="1" control={<Radio />} label="1" />
+                <FormControlLabel value="2" control={<Radio />} label="2" />
+                <FormControlLabel value="3" control={<Radio />} label="3" />
             </RadioGroup>
         </Box>
     );

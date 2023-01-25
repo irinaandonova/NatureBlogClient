@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { Container } from "@mui/system";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
@@ -24,7 +25,8 @@ const CommentContainer = ({ state, dispatch }) => {
                         destinationId: comment.destinationId,
                         text: comment.text,
                         creatorId: comment.creatorId,
-                        date: comment.date
+                        date: comment.date,
+                        username: comment.username
                     })
                 )
                 dispatch({ type: ActionType.getComments, payload: { destinationId: state.query.destinationId, comments: transformedData } });
@@ -35,9 +37,9 @@ const CommentContainer = ({ state, dispatch }) => {
     })
 
     return (
-        <Container>
+        <Box sx={{display: 'block', marginTop: '110px'}}>
             {state.data.map(x => <Comment comment={x} dispatch={dispatch} key={x.id} />)}
-        </Container>
+        </Box>
     )
 }
 

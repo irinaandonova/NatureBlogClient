@@ -1,0 +1,15 @@
+.add-comment-form {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.add-comment-btn {
+    color: black;
+    padding: 5px 15px;
+    background-color: rgb(127 204 147);
+    border-radius: 20px;
+    margin: 10px;
+}

@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
 .links {
     text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
     color: black;
-    padding: 10px 30px;
+    padding: 10px 15px;
     background-color: rgb(127 204 147);
     border-radius: 20px;
     margin: 10px;
 }
 
+.register-form {
+    margin: 10px 30px;
+}

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import AuthContext  from "../../auth/authContext";
-import { Button, Grid, TextField } from "@mui/material";
+import { Button, Grid, TextField, Typography } from "@mui/material";
 import HikingTrail from "../../components/CreateDestination/HikingTrail";
 import Seaside from "../../components/CreateDestination/Seaside";
 import Park from "../../components/CreateDestination/Park";
@@ -56,7 +56,7 @@ const CreateDestination = () => {
             });
 
             if (response.status == 200)
-                navigate('/');
+                navigate(`/destination/${response.data}`);
         }
         else if (destinationType === 'park') {
             const response = await axiosLocalInstance.post('destinations/park', {
@@ -73,7 +73,6 @@ const CreateDestination = () => {
                 navigate('/');
         }
         else if (destinationType == 'seaside') {
-            console.log(info);
             const response = await axiosLocalInstance.post('destinations/seaside', {
                 name,
                 regionId: region,
@@ -89,7 +88,7 @@ const CreateDestination = () => {
         }
     }
     return (
-        <Box>
+        <Box sx={{marginLeft: '90px'}}>
             {(isLoading || isFetching) ? <CircularProgress /> : null}
             {isError ? <p>Something went wrong</p> : null}
             <form className="form" onSubmit={async(e) => {
@@ -106,7 +105,8 @@ const CreateDestination = () => {
                     imageUrl,
                     destinationType)
             }}>
-                <Grid container direction="column" className="container">
+                <Grid container direction="column" className="container" >
+                    <Typography sx={{fontSize: '30px'}}>Create Destination: </Typography>
                     <Grid item>
                         <TextField label="Destination Name" name="name" margin="normal" type="text" inputProps={{ minLength: 2, maxLength: 100 }} />
                     </Grid>
@@ -141,7 +141,7 @@ const CreateDestination = () => {
                     <Grid item>
                         <FormControl margin="normal">
                             <InputLabel htmlFor="destinationType">Destination Type: </InputLabel>
-                            <Select margin="dense" className="destination-type" label="destinationType" name="destinationType" onChange={(e) => {
+                            <Select margin="dense" className="destination-type"  name="destinationType" onChange={(e) => {
                                 console.log(e.target.value);
                                 setDestinationType(e.target.value);
                             }}>

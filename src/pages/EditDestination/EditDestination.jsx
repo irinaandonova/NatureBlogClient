@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { useQuery } from "react-query";
 import { useNavigate, useParams } from "react-router-dom";
 import axiosLocalInstance from "../../config/axiosConfig";
-import AuthContext  from "../../auth/authContext";
+import AuthContext from "../../auth/authContext";
 import EditHikingTrail from "../../components/EditDestination/HikingTrail";
 import EditSeaside from "../../components/EditDestination/Seaside";
 import EditPark from "../../components/EditDestination/Park";
@@ -16,7 +16,7 @@ const EditDestination = () => {
     const navigate = useNavigate();
 
     const toggleType = (type) => {
-        
+
         if (type === 'hikingTrail')
             return <EditHikingTrail addInfo={addInfo} destinationData={destinationData} />
         else if (type === 'seaside')
@@ -61,7 +61,7 @@ const EditDestination = () => {
             });
 
             if (response.status === 200)
-                navigate('/');
+                navigate(`/destination/${id}`);
         }
         else if (destinationData?.type === 'park') {
             const body = {
@@ -103,7 +103,7 @@ const EditDestination = () => {
     const { data: destinationData, isLoading: destinationLoading, isFetching: destinationFetching, isError: destinationError } = useQuery(['getDestinationEditInfo'], getDestinatinInfo);
 
     return (
-        <Box>
+        <Box sx={{ marginLeft: "90px" }}>
             {destinationError || regionError ? <p>Something went wrong</p> : null}
             {(regionLoadining || destinationLoading || destinationFetching || regionFetching)
                 ?

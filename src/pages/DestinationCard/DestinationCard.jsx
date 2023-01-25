@@ -18,7 +18,7 @@ const DestinationCard = ({ destinationInfo }) => {
     const { data, isError, isFetching, isLoading } = useQuery(['getRegionQueryKey', destinationInfo], getRegion, { retry: false });
 
     return (
-        <Card sx={{ width: 345 }} className="container" onClick={() => navigate(`/destination/${destinationInfo.id}`)}>
+        <Card sx={{ width: 345 }} className="destination-container" onClick={() => navigate(`/destination/${destinationInfo.id}`)}>
             {(isLoading || isFetching) ? <CircularProgress /> : null}
             {isError ? <p>Something went wrong</p> : null}
             <CardMedia
