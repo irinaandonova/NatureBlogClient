@@ -1,14 +1,12 @@
-//import './App.css';
 import { Route, Routes } from "react-router-dom";
-import Header from "./pages/Header/Header";
+import { MsalProvider } from '@azure/msal-react';
+import PersistentDrawerLeft from "./components/SideMenu/SideMenu";
+import { AuthContextProvider } from "./auth/authContext";
+import { CommentsStore } from "./reducers/CommentsReducer";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Details from "./pages/Details/Details";
 import CreateDestination from "./pages/CreateDestination/CreateDestination";
 import EditDestination from "./pages/EditDestination/EditDestination";
-import { AuthContextProvider } from "./auth/authContext";
-import { CommentsStore } from "./reducers/CommentsReducer";
-import { MsalProvider } from '@azure/msal-react';
-import PersistentDrawerLeft from "./components/SideMenu/SideMenu";
 import RegisterForm from "./components/Authentication/RegisterForm";
 import HomePage from "./pages/HomePage/HomePage";
 
