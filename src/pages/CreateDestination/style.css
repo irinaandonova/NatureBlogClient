@@ -14,3 +14,18 @@
     background-color: rgb(127 204 147);
     margin: 10px;
 }
+
+.static-image {
+    width: 380px;
+    height: 245px;
+    margin: 5px 30px 10px 5px;
+    border-radius: 10px;
+}
+
+.form {
+    margin: 0 60xp;
+}
+
+.right {
+    margin-left: 80px;
+}

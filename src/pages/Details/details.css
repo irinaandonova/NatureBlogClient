@@ -1,10 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
 .container {
     margin: 5px, 10px;
 }
 
 .image {
-    width: 500px;
-    height: 300px;
+    width: 560px;
+    height: 340px;
     border-radius: 5px;
     border: 1px solid;
+}
+
+.font {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    font-weight: 200;
+}
+
+.name {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 5px 0 0 0;
+    font-weight: 800;
+}
+.additional-font {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.description {
+    margin-right: 100px;
 }
