@@ -1,11 +1,7 @@
 import { useState } from 'react';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import { Box, InputLabel, MenuItem, FormControl, Select } from '@mui/material';
 
-const Sorting =({ manageSorting }) => {
+const Sorting = ({ manageSorting }) => {
   const [selectValue, setSelectValue] = useState('visitors');
   const handleChange = (event) => {
     setSelectValue(event.target.value);
@@ -20,7 +16,7 @@ const Sorting =({ manageSorting }) => {
           value={selectValue}
           label="Sort By"
           onChange={handleChange}
-          sx={{width: '385px'}}
+          sx={{ width: '385px' }}
         >
           <MenuItem value='visitors'>Visitors</MenuItem>
           <MenuItem value='alphabetical'>Alphabetical(A-Z)</MenuItem>

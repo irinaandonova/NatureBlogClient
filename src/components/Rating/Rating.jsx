@@ -1,9 +1,8 @@
-import { Stack } from "@mui/system";
-import { Rating, Typography } from "@mui/material";
 import { useContext, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Rating, Typography, Stack } from "@mui/material";
 import  AuthContext  from "../../auth/authContext";
 import axiosLocalInstance from "../../config/axiosConfig";
-import { useParams } from "react-router-dom";
 
 const RatingComponent = ({ ratingScore }) => {
     const { user } = useContext(AuthContext);

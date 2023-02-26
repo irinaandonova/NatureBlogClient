@@ -1,5 +1,5 @@
-import { Box, RadioGroup, FormLabel, FormControlLabel, Radio } from '@mui/material';
 import { useState } from 'react';
+import { Box, RadioGroup, FormLabel, FormControlLabel, Radio } from '@mui/material';
 
 const EditPark = ({ addInfo, destinationData }) => {
     const [hasPlayground, setHasPlayground] = useState(destinationData.hasPlayground);
