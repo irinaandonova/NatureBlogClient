@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@200;500&display=swap');
+
 .destination-image {
     max-width: 300px;
     border-radius: 5px;
@@ -19,4 +21,14 @@
     margin: 10px 40px;
 }
 
+.smaller-name {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    
+}
+
+#reagion {
+    font-weight: 200;
+}
 
