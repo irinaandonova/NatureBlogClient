@@ -16,10 +16,10 @@ const LoginButton = () => {
             textDecoration: 'none',
             color: 'black',
             padding: '10px 30px',
-            backgroundColor: 'rgb(127 204 147)',
+            backgroundColor: '#e4ada2',
             borderRadius: '20px',
             marginTop: '5px',
-            marginLeft: '1060px',
+            marginLeft: '1050px',
         }}>Sign in</Button>
     )
 }

@@ -153,7 +153,7 @@ const EditDestination = () => {
                             </FormControl>
                         </Grid>
                         {toggleType(destinationData?.type)}
-                        <Button type="submit" variant="contained" className="submit-btn">Edit</Button>
+                        <Button type="submit" variant="contained" sx={{backgroundColor: '#e4ada2', marginLeft: '5px', color: 'black', width: '150px', margin: '10px'}}>Edit</Button>
                     </Grid>
                 </form>
             }

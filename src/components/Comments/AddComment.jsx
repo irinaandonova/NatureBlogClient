@@ -1,12 +1,10 @@
-import { Box, Button, TextField } from "@mui/material";
-import { Container } from "@mui/system";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import { Dispatch, useContext, useState } from "react";
-import { useQuery } from "react-query";
 import { useNavigate, useParams } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
 import axiosLocalInstance from "../../config/axiosConfig";
 import './comments.css';
-
+import '../../pages/Details/details.css';
 const AddComment = ({ state, dispatch }) => {
     const { id } = useParams();
     const { user } = useContext(AuthContext);
@@ -36,19 +34,22 @@ const AddComment = ({ state, dispatch }) => {
         }
     }
     return (
-        <Container sx={{ display: 'block', marginLeft: '500px' }}>
+        <Box sx={{ display: 'block', marginLeft: '41px'}}>
+            <Typography sx={{marginTop: '10px',  }} className="font">
+                Have you been there? Tells us about your experience!
+            </Typography>
             <form onSubmit={onSubmitHandler} className="add-comment-form">
-                <TextField multiline rows={3} label="Add Comment" name="text" sx={{ display: 'block', width: '500px' }} />
+                <TextField multiline rows={2} label="Add Comment" name="text" sx={{ display: 'block', width: '700px' }} />
                 <Button type="submit" sx={{
                     color: 'black',
                     padding: '5px 15px',
-                    backgroundColor: 'rgb(127 204 147)',
+                    backgroundColor: '#e4ada2',
                     borderRadius: '20px',
-                    marginLeft: '35px',
+                    marginLeft: '30px',
                     marginTop: '10px'
                 }}>Add comment</Button>
             </form>
-        </Container>
+        </Box>
     )
 }
 

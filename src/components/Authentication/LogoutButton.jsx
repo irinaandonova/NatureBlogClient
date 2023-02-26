@@ -12,11 +12,13 @@ const LogoutButton = () => {
             textDecoration: 'none',
             color: 'black',
             padding: '10px 30px',
-            backgroundColor: 'rgb(127 204 147)',
+            backgroundColor: '#e4ada2',
             borderRadius: '20px',
-            marginLeft: '1000px',
+            marginLeft: '1050px',
         }}>Logout</Button>
     );
 }
 
 export default LogoutButton;
+
+//'rgb(127 204 147)'
